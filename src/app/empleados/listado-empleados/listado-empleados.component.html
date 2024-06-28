@@ -1,0 +1,22 @@
+<div class="container mt-4 mn-4">
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Fecha de nacimiento</th>
+                <th>Sexo</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center" *ngFor="let empleado of empleados">
+                <td>{{empleado.nombre}}</td>
+                <td>{{empleado.correo}}</td>
+                <td>{{empleado.fechaNacimiento | date}}</td>
+                <td>{{empleado.sexo}}</td>
+                <td><button class="btn btn-danger" (click)="eliminarEmpleado(empleado)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
